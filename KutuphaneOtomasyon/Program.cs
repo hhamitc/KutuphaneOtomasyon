@@ -8,6 +8,8 @@ namespace KutuphaneOtomasyon
 {
     internal static class Program
     {
+        //Denemek için eklenmiş yorum.
+
         /// <summary>
         /// Uygulamanın ana girdi noktası.
         /// </summary>

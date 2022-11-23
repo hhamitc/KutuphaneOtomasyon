@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="KutuphaneProjeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Aboneler">
+          <Key>
+            <PropertyRef Name="AboneId" />
+          </Key>
+          <Property Name="AboneId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AboneAdi" Type="nvarchar" MaxLength="50" />
+          <Property Name="AboneCinsiyet" Type="nchar" MaxLength="10" />
+          <Property Name="AboneTelefon" Type="nvarchar" MaxLength="13" />
+          <Property Name="AboneMail" Type="nvarchar" MaxLength="100" />
+          <Property Name="AbonelikTipi" Type="nvarchar" MaxLength="10" />
+          <Property Name="AbonelikDurumu" Type="nvarchar" MaxLength="10" />
+          <Property Name="AbonelikTarihi" Type="date" />
+        </EntityType>
+        <EntityType Name="Gorevliler">
+          <Key>
+            <PropertyRef Name="GorevliId" />
+          </Key>
+          <Property Name="GorevliId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GorevliAdi" Type="nvarchar" MaxLength="20" />
+          <Property Name="Gorevli_k_adi" Type="nvarchar" MaxLength="10" />
+          <Property Name="Gorevli_sifre" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'KutuphaneProje.dbo.Islem' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Islem">
+          <Property Name="IslemNo" Type="int" />
+          <Property Name="AboneId" Type="int" />
+          <Property Name="KitapId" Type="int" />
+          <Property Name="GorevliId" Type="int" />
+          <Property Name="AlisTarihi" Type="date" />
+          <Property Name="TeslimTarihi" Type="date" />
+          <Property Name="GunFarki" Type="int" />
+          <Property Name="IslemSonuUcret" Type="money" />
+        </EntityType>-->
+        <EntityType Name="Kitaplar">
+          <Key>
+            <PropertyRef Name="KitapId" />
+          </Key>
+          <Property Name="KitapId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KitapAdi" Type="nvarchar" MaxLength="100" />
+          <Property Name="KitapBasimNo" Type="int" />
+          <Property Name="YazarId" Type="int" />
+          <Property Name="YayinEviId" Type="int" />
+          <Property Name="SayfaSayisi" Type="int" />
+          <Property Name="TurNo" Type="int" />
+        </EntityType>
+        <EntityType Name="Turler">
+          <Key>
+            <PropertyRef Name="TurNo" />
+          </Key>
+          <Property Name="TurNo" Type="int" Nullable="false" />
+          <Property Name="TurAdi" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="YayinEvleri">
+          <Key>
+            <PropertyRef Name="YayinEviId" />
+          </Key>
+          <Property Name="YayinEviId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YayinEviAdi" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Yazarlar">
+          <Key>
+            <PropertyRef Name="YazarId" />
+          </Key>
+          <Property Name="YazarId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YazarAdi" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="KutuphaneProjeModelStoreContainer">
+          <EntitySet Name="Aboneler" EntityType="Self.Aboneler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gorevliler" EntityType="Self.Gorevliler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kitaplar" EntityType="Self.Kitaplar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Turler" EntityType="Self.Turler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="YayinEvleri" EntityType="Self.YayinEvleri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Yazarlar" EntityType="Self.Yazarlar" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KutuphaneProjeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Aboneler">
+          <Key>
+            <PropertyRef Name="AboneId" />
+          </Key>
+          <Property Name="AboneId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AboneAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="AboneCinsiyet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="AboneTelefon" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="AboneMail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="AbonelikTipi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="AbonelikDurumu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="AbonelikTarihi" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="Gorevliler">
+          <Key>
+            <PropertyRef Name="GorevliId" />
+          </Key>
+          <Property Name="GorevliId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GorevliAdi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Gorevli_k_adi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Gorevli_sifre" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Kitaplar">
+          <Key>
+            <PropertyRef Name="KitapId" />
+          </Key>
+          <Property Name="KitapId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KitapAdi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="KitapBasimNo" Type="Int32" />
+          <Property Name="YazarId" Type="Int32" />
+          <Property Name="YayinEviId" Type="Int32" />
+          <Property Name="SayfaSayisi" Type="Int32" />
+          <Property Name="TurNo" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Turler">
+          <Key>
+            <PropertyRef Name="TurNo" />
+          </Key>
+          <Property Name="TurNo" Type="Int32" Nullable="false" />
+          <Property Name="TurAdi" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="YayinEvleri">
+          <Key>
+            <PropertyRef Name="YayinEviId" />
+          </Key>
+          <Property Name="YayinEviId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YayinEviAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Yazarlar">
+          <Key>
+            <PropertyRef Name="YazarId" />
+          </Key>
+          <Property Name="YazarId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YazarAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="KutuphaneProjeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Aboneler" EntityType="Self.Aboneler" />
+          <EntitySet Name="Gorevliler" EntityType="Self.Gorevliler" />
+          <EntitySet Name="Kitaplar" EntityType="Self.Kitaplar" />
+          <EntitySet Name="Turler" EntityType="Self.Turler" />
+          <EntitySet Name="YayinEvleri" EntityType="Self.YayinEvleri" />
+          <EntitySet Name="Yazarlar" EntityType="Self.Yazarlar" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KutuphaneProjeModelStoreContainer" CdmEntityContainer="KutuphaneProjeEntities">
+          <EntitySetMapping Name="Aboneler">
+            <EntityTypeMapping TypeName="KutuphaneProjeModel.Aboneler">
+              <MappingFragment StoreEntitySet="Aboneler">
+                <ScalarProperty Name="AboneId" ColumnName="AboneId" />
+                <ScalarProperty Name="AboneAdi" ColumnName="AboneAdi" />
+                <ScalarProperty Name="AboneCinsiyet" ColumnName="AboneCinsiyet" />
+                <ScalarProperty Name="AboneTelefon" ColumnName="AboneTelefon" />
+                <ScalarProperty Name="AboneMail" ColumnName="AboneMail" />
+                <ScalarProperty Name="AbonelikTipi" ColumnName="AbonelikTipi" />
+                <ScalarProperty Name="AbonelikDurumu" ColumnName="AbonelikDurumu" />
+                <ScalarProperty Name="AbonelikTarihi" ColumnName="AbonelikTarihi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gorevliler">
+            <EntityTypeMapping TypeName="KutuphaneProjeModel.Gorevliler">
+              <MappingFragment StoreEntitySet="Gorevliler">
+                <ScalarProperty Name="GorevliId" ColumnName="GorevliId" />
+                <ScalarProperty Name="GorevliAdi" ColumnName="GorevliAdi" />
+                <ScalarProperty Name="Gorevli_k_adi" ColumnName="Gorevli_k_adi" />
+                <ScalarProperty Name="Gorevli_sifre" ColumnName="Gorevli_sifre" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kitaplar">
+            <EntityTypeMapping TypeName="KutuphaneProjeModel.Kitaplar">
+              <MappingFragment StoreEntitySet="Kitaplar">
+                <ScalarProperty Name="KitapId" ColumnName="KitapId" />
+                <ScalarProperty Name="KitapAdi" ColumnName="KitapAdi" />
+                <ScalarProperty Name="KitapBasimNo" ColumnName="KitapBasimNo" />
+                <ScalarProperty Name="YazarId" ColumnName="YazarId" />
+                <ScalarProperty Name="YayinEviId" ColumnName="YayinEviId" />
+                <ScalarProperty Name="SayfaSayisi" ColumnName="SayfaSayisi" />
+                <ScalarProperty Name="TurNo" ColumnName="TurNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Turler">
+            <EntityTypeMapping TypeName="KutuphaneProjeModel.Turler">
+              <MappingFragment StoreEntitySet="Turler">
+                <ScalarProperty Name="TurNo" ColumnName="TurNo" />
+                <ScalarProperty Name="TurAdi" ColumnName="TurAdi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="YayinEvleri">
+            <EntityTypeMapping TypeName="KutuphaneProjeModel.YayinEvleri">
+              <MappingFragment StoreEntitySet="YayinEvleri">
+                <ScalarProperty Name="YayinEviId" ColumnName="YayinEviId" />
+                <ScalarProperty Name="YayinEviAdi" ColumnName="YayinEviAdi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Yazarlar">
+            <EntityTypeMapping TypeName="KutuphaneProjeModel.Yazarlar">
+              <MappingFragment StoreEntitySet="Yazarlar">
+                <ScalarProperty Name="YazarId" ColumnName="YazarId" />
+                <ScalarProperty Name="YazarAdi" ColumnName="YazarAdi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
