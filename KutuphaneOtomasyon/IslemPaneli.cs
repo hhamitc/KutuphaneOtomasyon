@@ -1,4 +1,5 @@
 ﻿using KutuphaneOtomasyon.Abone;
+using KutuphaneOtomasyon.Kaynak;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,16 @@ namespace KutuphaneOtomasyon
         KutuphaneProjeEntities db = new KutuphaneProjeEntities();
         private void IslemPaneli_Load(object sender, EventArgs e)
         {
+
+            //kullanıcı butonları girişte kapalıdır.(ekle-güncelle-sil) 
             ekleAbonebtn.Visible = false;
             guncelleAbonebtn.Visible = false;
             silAbonebtn.Visible = false;
+
+            // kaynak butonları girişte kapalıdır.(ekle-güncelle-sil)
+            ekleKaynakbtn.Visible = false;
+            guncelleKaynakbtn.Visible = false;
+            silKaynakbtn.Visible = false;
 
         }
 
@@ -69,6 +77,27 @@ namespace KutuphaneOtomasyon
             AboneGuncelleForm aGuncelle = new AboneGuncelleForm();
             aGuncelle.MdiParent = this;
             aGuncelle.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (ekleKaynakbtn.Visible == false)
+            {
+                ekleKaynakbtn.Visible = true;
+                guncelleKaynakbtn.Visible = true;
+                silKaynakbtn.Visible = true;
+            }
+            else
+            {
+                ekleKaynakbtn.Visible = false;
+                guncelleKaynakbtn.Visible = false;
+                silKaynakbtn.Visible = false;
+            }
+
+            KaynakListeForm kliste = new KaynakListeForm();
+            kliste.MdiParent = this;
+            kliste.Show();
+
         }
     }
 }
