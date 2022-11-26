@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KutuphaneOtomasyon.Abone;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,6 +48,20 @@ namespace KutuphaneOtomasyon
 
             
              
+        }
+
+        private void ekleAbonebtn_Click(object sender, EventArgs e)
+        {
+            AboneEkleForm ekleForm = new AboneEkleForm();
+            ekleForm.MdiParent = this;
+            ekleForm.Show();
+        }
+
+        private void silAbonebtn_Click(object sender, EventArgs e)
+        {
+            AboneSilForm aSil = new AboneSilForm();
+            aSil.MdiParent = this;
+            aSil.Show();
         }
     }
 }

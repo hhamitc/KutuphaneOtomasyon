@@ -64,6 +64,7 @@
             this.silAbonebtn.TabIndex = 3;
             this.silAbonebtn.Text = "Sil";
             this.silAbonebtn.UseVisualStyleBackColor = false;
+            this.silAbonebtn.Click += new System.EventHandler(this.silAbonebtn_Click);
             // 
             // guncelleAbonebtn
             // 
@@ -93,6 +94,7 @@
             this.ekleAbonebtn.TabIndex = 1;
             this.ekleAbonebtn.Text = "Ekle";
             this.ekleAbonebtn.UseVisualStyleBackColor = false;
+            this.ekleAbonebtn.Click += new System.EventHandler(this.ekleAbonebtn_Click);
             // 
             // button1
             // 
