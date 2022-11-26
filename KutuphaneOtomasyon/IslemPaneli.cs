@@ -63,5 +63,12 @@ namespace KutuphaneOtomasyon
             aSil.MdiParent = this;
             aSil.Show();
         }
+
+        private void guncelleAbonebtn_Click(object sender, EventArgs e)
+        {
+            AboneGuncelleForm aGuncelle = new AboneGuncelleForm();
+            aGuncelle.MdiParent = this;
+            aGuncelle.Show();
+        }
     }
 }

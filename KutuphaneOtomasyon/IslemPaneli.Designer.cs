@@ -79,6 +79,7 @@
             this.guncelleAbonebtn.TabIndex = 2;
             this.guncelleAbonebtn.Text = "Güncelle";
             this.guncelleAbonebtn.UseVisualStyleBackColor = false;
+            this.guncelleAbonebtn.Click += new System.EventHandler(this.guncelleAbonebtn_Click);
             // 
             // ekleAbonebtn
             // 

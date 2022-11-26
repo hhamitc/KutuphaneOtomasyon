@@ -64,6 +64,12 @@
     <Compile Include="Abone\AboneEkleForm.Designer.cs">
       <DependentUpon>AboneEkleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Abone\AboneGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Abone\AboneGuncelleForm.Designer.cs">
+      <DependentUpon>AboneGuncelleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Abone\AboneListeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="Abone\AboneEkleForm.resx">
       <DependentUpon>AboneEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Abone\AboneGuncelleForm.resx">
+      <DependentUpon>AboneGuncelleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Abone\AboneListeForm.resx">
       <DependentUpon>AboneListeForm.cs</DependentUpon>
