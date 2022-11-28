@@ -120,6 +120,7 @@
             this.ekleKitapbtn.TabIndex = 5;
             this.ekleKitapbtn.Text = "Kitap Ekle";
             this.ekleKitapbtn.UseVisualStyleBackColor = false;
+            this.ekleKitapbtn.Click += new System.EventHandler(this.ekleKitapbtn_Click);
             // 
             // button2
             // 

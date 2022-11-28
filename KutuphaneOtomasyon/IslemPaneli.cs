@@ -102,6 +102,16 @@ namespace KutuphaneOtomasyon
                 ekleYazarbtn.Visible = true;
                 guncelleYazarbtn.Visible = true;
                 silYazarbtn.Visible = true;
+
+                ekleYayinevibtn.Visible = true;
+                guncelleYayinevibtn.Visible = true;
+                silYayinevibtn.Visible = true;
+
+                ekleTurbtn.Visible = true;
+                guncelleTurbtn.Visible = true;
+                silTurbtn.Visible = true;
+
+
             }
             else
             {
@@ -111,12 +121,27 @@ namespace KutuphaneOtomasyon
                 ekleYazarbtn.Visible = false;
                 guncelleYazarbtn.Visible = false;
                 silYazarbtn.Visible = false;
+
+                ekleYayinevibtn.Visible = false;
+                guncelleYayinevibtn.Visible = false;
+                silYayinevibtn.Visible = false;
+
+                ekleTurbtn.Visible = false;
+                guncelleTurbtn.Visible = false;
+                silTurbtn.Visible = false;
             }
 
             KaynakListeForm kliste = new KaynakListeForm();
             kliste.MdiParent = this;
             kliste.Show();
 
+        }
+
+        private void ekleKitapbtn_Click(object sender, EventArgs e)
+        {
+            KitapEkleForm ekleForm = new KitapEkleForm();
+            ekleForm.MdiParent = this;
+            ekleForm.Show();
         }
     }
 }
