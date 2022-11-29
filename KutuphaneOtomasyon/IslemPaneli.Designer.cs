@@ -235,6 +235,7 @@
             this.guncelleKitapbtn.TabIndex = 6;
             this.guncelleKitapbtn.Text = "Kitap Güncelle";
             this.guncelleKitapbtn.UseVisualStyleBackColor = false;
+            this.guncelleKitapbtn.Click += new System.EventHandler(this.guncelleKitapbtn_Click);
             // 
             // ekleKitapbtn
             // 

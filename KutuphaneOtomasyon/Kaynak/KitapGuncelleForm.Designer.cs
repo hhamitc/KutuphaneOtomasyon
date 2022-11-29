@@ -187,6 +187,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(735, 470);
             this.dataGridView1.TabIndex = 38;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // KitapGuncelleForm
             // 
@@ -211,6 +212,7 @@
             this.Name = "KitapGuncelleForm";
             this.Text = "KitapGuncelleForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.KitapGuncelleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.kitapTurNonum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kitapSayfaSayisinum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kitapYayinEviIdnum)).EndInit();
