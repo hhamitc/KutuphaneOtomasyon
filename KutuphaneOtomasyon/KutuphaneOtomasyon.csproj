@@ -82,11 +82,11 @@
     <Compile Include="Abone\AboneSilForm.Designer.cs">
       <DependentUpon>AboneSilForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="GorevliGiris.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GorevliGiris.Designer.cs">
+      <DependentUpon>GorevliGiris.cs</DependentUpon>
     </Compile>
     <Compile Include="Gorevliler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -162,8 +162,8 @@
     <EmbeddedResource Include="Abone\AboneSilForm.resx">
       <DependentUpon>AboneSilForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GorevliGiris.resx">
+      <DependentUpon>GorevliGiris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IslemPaneli.resx">
       <DependentUpon>IslemPaneli.cs</DependentUpon>
@@ -173,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Kaynak\KitapEkleForm.resx">
       <DependentUpon>KitapEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kaynak\KitapGuncelleForm.resx">
+      <DependentUpon>KitapGuncelleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kaynak\KitapSilForm.resx">
       <DependentUpon>KitapSilForm.cs</DependentUpon>
