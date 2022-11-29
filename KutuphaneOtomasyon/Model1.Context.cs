@@ -18,6 +18,7 @@ namespace KutuphaneOtomasyon
         public KutuphaneProjeEntities()
             : base("name=KutuphaneProjeEntities")
         {
+
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
