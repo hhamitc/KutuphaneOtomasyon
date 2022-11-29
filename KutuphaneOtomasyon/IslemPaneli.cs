@@ -139,9 +139,29 @@ namespace KutuphaneOtomasyon
 
         private void ekleKitapbtn_Click(object sender, EventArgs e)
         {
-            KitapEkleForm ekleForm = new KitapEkleForm();
-            ekleForm.MdiParent = this;
-            ekleForm.Show();
+            KitapEkleForm kEkle= new KitapEkleForm();
+            kEkle.MdiParent = this;
+            kEkle.Show();
         }
+
+        private void silKitapbtn_Click(object sender, EventArgs e)
+        {
+            KitapSilForm kSil = new KitapSilForm();
+            kSil.MdiParent = this;
+            kSil.Show();
+        }
+
+        private void guncelleKitapbtn_Click(object sender, EventArgs e)
+        {
+            KitapGuncelleForm kGuncelle = new KitapGuncelleForm();
+            kGuncelle.MdiParent = this;
+            kGuncelle.Show();
+        }
+
+
+
+
+
+
     }
 }

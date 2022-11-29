@@ -11,12 +11,12 @@ using System.Data.SqlClient;
 
 namespace KutuphaneOtomasyon
 {
-    public partial class Form1 : Form
+    public partial class GorevliGiris : Form
     {
         KutuphaneProjeEntities db = new KutuphaneProjeEntities();
 
 
-        public Form1()
+        public GorevliGiris()
         {
             InitializeComponent();
         }
