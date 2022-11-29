@@ -55,7 +55,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(221, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(661, 456);
+            this.dataGridView1.Size = new System.Drawing.Size(735, 470);
             this.dataGridView1.TabIndex = 0;
             // 
             // kitapAdtxt
@@ -187,13 +187,14 @@
             this.button1.TabIndex = 37;
             this.button1.Text = "Kitap Ekle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // KitapEkleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(894, 494);
+            this.ClientSize = new System.Drawing.Size(968, 494);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.kitapTurNonum);
             this.Controls.Add(this.kitapSayfaSayisinum);
@@ -210,6 +211,8 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "KitapEkleForm";
             this.Text = "KitapEkleForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.KitapEkleForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kitapBasimNonum)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kitapYazarIdnum)).EndInit();
