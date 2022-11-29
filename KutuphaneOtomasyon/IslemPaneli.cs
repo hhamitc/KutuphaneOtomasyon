@@ -28,9 +28,21 @@ namespace KutuphaneOtomasyon
             silAbonebtn.Visible = false;
 
             // kaynak butonları girişte kapalıdır.(ekle-güncelle-sil)
-            ekleKaynakbtn.Visible = false;
-            guncelleKaynakbtn.Visible = false;
-            silKaynakbtn.Visible = false;
+            ekleKitapbtn.Visible = false;
+            guncelleKitapbtn.Visible = false;
+            silKitapbtn.Visible = false;
+
+            ekleYazarbtn.Visible = false;
+            guncelleYazarbtn.Visible = false;
+            silYazarbtn.Visible = false;
+
+            ekleYayinevibtn.Visible = false;
+            guncelleYayinevibtn.Visible = false;
+            silYayinevibtn.Visible = false;
+
+            ekleTurbtn.Visible = false;
+            guncelleTurbtn.Visible = false;
+            silTurbtn.Visible = false;
 
         }
 
@@ -47,6 +59,7 @@ namespace KutuphaneOtomasyon
                 ekleAbonebtn.Visible = false;
                 guncelleAbonebtn.Visible = false;
                 silAbonebtn.Visible = false;
+
             }
 
 
@@ -81,23 +94,54 @@ namespace KutuphaneOtomasyon
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (ekleKaynakbtn.Visible == false)
+            if (ekleKitapbtn.Visible == false)
             {
-                ekleKaynakbtn.Visible = true;
-                guncelleKaynakbtn.Visible = true;
-                silKaynakbtn.Visible = true;
+                ekleKitapbtn.Visible = true;
+                guncelleKitapbtn.Visible = true;
+                silKitapbtn.Visible = true;
+                ekleYazarbtn.Visible = true;
+                guncelleYazarbtn.Visible = true;
+                silYazarbtn.Visible = true;
+
+                ekleYayinevibtn.Visible = true;
+                guncelleYayinevibtn.Visible = true;
+                silYayinevibtn.Visible = true;
+
+                ekleTurbtn.Visible = true;
+                guncelleTurbtn.Visible = true;
+                silTurbtn.Visible = true;
+
+
             }
             else
             {
-                ekleKaynakbtn.Visible = false;
-                guncelleKaynakbtn.Visible = false;
-                silKaynakbtn.Visible = false;
+                ekleKitapbtn.Visible = false;
+                guncelleKitapbtn.Visible = false;
+                silKitapbtn.Visible = false;
+                ekleYazarbtn.Visible = false;
+                guncelleYazarbtn.Visible = false;
+                silYazarbtn.Visible = false;
+
+                ekleYayinevibtn.Visible = false;
+                guncelleYayinevibtn.Visible = false;
+                silYayinevibtn.Visible = false;
+
+                ekleTurbtn.Visible = false;
+                guncelleTurbtn.Visible = false;
+                silTurbtn.Visible = false;
             }
 
             KaynakListeForm kliste = new KaynakListeForm();
             kliste.MdiParent = this;
             kliste.Show();
 
+        }
+
+        private void ekleKitapbtn_Click(object sender, EventArgs e)
+        {
+            KitapEkleForm ekleForm = new KitapEkleForm();
+            ekleForm.MdiParent = this;
+            ekleForm.Show();
         }
     }
 }

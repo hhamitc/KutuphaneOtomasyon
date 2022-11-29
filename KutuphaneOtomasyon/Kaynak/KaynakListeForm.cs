@@ -16,5 +16,18 @@ namespace KutuphaneOtomasyon.Kaynak
         {
             InitializeComponent();
         }
+
+        public void listele()
+        {
+            KutuphaneProjeEntities db = new KutuphaneProjeEntities();
+            var kaynaklar = db.Kitaplar.ToList();
+            dataGridView1.DataSource = kaynaklar.ToList();
+        }
+       
+
+        private void KaynakListeForm_Load(object sender, EventArgs e)
+        {
+            listele();
+        }
     }
 }
