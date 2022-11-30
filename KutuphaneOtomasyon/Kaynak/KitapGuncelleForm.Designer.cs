@@ -58,6 +58,7 @@
             this.button1.TabIndex = 51;
             this.button1.Text = "Kitap Güncelle";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // kitapTurNonum
             // 
@@ -183,9 +184,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(219, -2);
+            this.dataGridView1.Location = new System.Drawing.Point(208, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(735, 470);
+            this.dataGridView1.Size = new System.Drawing.Size(735, 613);
             this.dataGridView1.TabIndex = 38;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
@@ -194,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(958, 468);
+            this.ClientSize = new System.Drawing.Size(955, 624);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.kitapTurNonum);
             this.Controls.Add(this.kitapSayfaSayisinum);

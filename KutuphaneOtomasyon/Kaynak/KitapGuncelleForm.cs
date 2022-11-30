@@ -39,5 +39,23 @@ namespace KutuphaneOtomasyon.Kaynak
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int secilenKitap = Convert.ToInt16(dataGridView1.CurrentRow.Cells[0].Value);
+            var guncellenecekKitap = db.Kitaplar.Where(x=>x.KitapId==secilenKitap).FirstOrDefault();
+            guncellenecekKitap.KitapAdi = kitapAdtxt.Text;
+            guncellenecekKitap.KitapBasimNo = Convert.ToInt32(kitapBasimNonum.Value);
+            guncellenecekKitap.YazarId = Convert.ToInt32(kitapYazarIdnum.Value);
+            guncellenecekKitap.YayinEviId = Convert.ToInt32(kitapYayinEviIdnum.Value);
+            guncellenecekKitap.SayfaSayisi = Convert.ToInt32(kitapSayfaSayisinum.Value);
+            guncellenecekKitap.TurNo = Convert.ToInt32(kitapTurNonum.Value);
+
+            db.SaveChanges();
+
+            var kitaplar = db.Kitaplar.ToList();
+            dataGridView1.DataSource = kitaplar.ToList();
+
+        }
     }
 }

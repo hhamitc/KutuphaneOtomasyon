@@ -1,4 +1,5 @@
 ﻿using KutuphaneOtomasyon.Abone;
+using KutuphaneOtomasyon.Kayit;
 using KutuphaneOtomasyon.Kaynak;
 using System;
 using System.Collections.Generic;
@@ -158,10 +159,11 @@ namespace KutuphaneOtomasyon
             kGuncelle.Show();
         }
 
-
-
-
-
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OduncVerForm odunc = new OduncVerForm();
+            odunc.MdiParent = this;
+            odunc.Show();
+        }
     }
 }

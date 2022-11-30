@@ -18,7 +18,6 @@ namespace KutuphaneOtomasyon
         public KutuphaneProjeEntities()
             : base("name=KutuphaneProjeEntities")
         {
-
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -32,5 +31,6 @@ namespace KutuphaneOtomasyon
         public virtual DbSet<Turler> Turler { get; set; }
         public virtual DbSet<YayinEvleri> YayinEvleri { get; set; }
         public virtual DbSet<Yazarlar> Yazarlar { get; set; }
+        public virtual DbSet<Islem> Islem { get; set; }
     }
 }

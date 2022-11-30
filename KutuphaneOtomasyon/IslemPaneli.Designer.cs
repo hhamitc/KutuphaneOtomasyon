@@ -48,6 +48,7 @@
             this.ekleAbonebtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.kullaniciBilgiPanel = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             // 
             this.panel1.AutoScroll = true;
             this.panel1.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.silTurbtn);
             this.panel1.Controls.Add(this.guncelleTurbtn);
             this.panel1.Controls.Add(this.ekleTurbtn);
@@ -85,9 +87,9 @@
             this.silTurbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.silTurbtn.Image = ((System.Drawing.Image)(resources.GetObject("silTurbtn.Image")));
             this.silTurbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.silTurbtn.Location = new System.Drawing.Point(0, 848);
+            this.silTurbtn.Location = new System.Drawing.Point(0, 768);
             this.silTurbtn.Name = "silTurbtn";
-            this.silTurbtn.Size = new System.Drawing.Size(217, 53);
+            this.silTurbtn.Size = new System.Drawing.Size(217, 48);
             this.silTurbtn.TabIndex = 16;
             this.silTurbtn.Text = "Tür Sil";
             this.silTurbtn.UseVisualStyleBackColor = false;
@@ -99,9 +101,9 @@
             this.guncelleTurbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.guncelleTurbtn.Image = ((System.Drawing.Image)(resources.GetObject("guncelleTurbtn.Image")));
             this.guncelleTurbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guncelleTurbtn.Location = new System.Drawing.Point(0, 795);
+            this.guncelleTurbtn.Location = new System.Drawing.Point(0, 720);
             this.guncelleTurbtn.Name = "guncelleTurbtn";
-            this.guncelleTurbtn.Size = new System.Drawing.Size(217, 53);
+            this.guncelleTurbtn.Size = new System.Drawing.Size(217, 48);
             this.guncelleTurbtn.TabIndex = 15;
             this.guncelleTurbtn.Text = "Tür Güncelle";
             this.guncelleTurbtn.UseVisualStyleBackColor = false;
@@ -113,10 +115,10 @@
             this.ekleTurbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ekleTurbtn.Image = ((System.Drawing.Image)(resources.GetObject("ekleTurbtn.Image")));
             this.ekleTurbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ekleTurbtn.Location = new System.Drawing.Point(0, 742);
+            this.ekleTurbtn.Location = new System.Drawing.Point(0, 672);
             this.ekleTurbtn.Name = "ekleTurbtn";
             this.ekleTurbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ekleTurbtn.Size = new System.Drawing.Size(217, 53);
+            this.ekleTurbtn.Size = new System.Drawing.Size(217, 48);
             this.ekleTurbtn.TabIndex = 14;
             this.ekleTurbtn.Text = "Tür Ekle";
             this.ekleTurbtn.UseVisualStyleBackColor = false;
@@ -128,9 +130,9 @@
             this.silYayinevibtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.silYayinevibtn.Image = ((System.Drawing.Image)(resources.GetObject("silYayinevibtn.Image")));
             this.silYayinevibtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.silYayinevibtn.Location = new System.Drawing.Point(0, 689);
+            this.silYayinevibtn.Location = new System.Drawing.Point(0, 624);
             this.silYayinevibtn.Name = "silYayinevibtn";
-            this.silYayinevibtn.Size = new System.Drawing.Size(217, 53);
+            this.silYayinevibtn.Size = new System.Drawing.Size(217, 48);
             this.silYayinevibtn.TabIndex = 13;
             this.silYayinevibtn.Text = "Yayınevi Sil";
             this.silYayinevibtn.UseVisualStyleBackColor = false;
@@ -142,9 +144,9 @@
             this.guncelleYayinevibtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.guncelleYayinevibtn.Image = ((System.Drawing.Image)(resources.GetObject("guncelleYayinevibtn.Image")));
             this.guncelleYayinevibtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guncelleYayinevibtn.Location = new System.Drawing.Point(0, 636);
+            this.guncelleYayinevibtn.Location = new System.Drawing.Point(0, 576);
             this.guncelleYayinevibtn.Name = "guncelleYayinevibtn";
-            this.guncelleYayinevibtn.Size = new System.Drawing.Size(217, 53);
+            this.guncelleYayinevibtn.Size = new System.Drawing.Size(217, 48);
             this.guncelleYayinevibtn.TabIndex = 12;
             this.guncelleYayinevibtn.Text = "Yayınevi Güncelle";
             this.guncelleYayinevibtn.UseVisualStyleBackColor = false;
@@ -156,10 +158,10 @@
             this.ekleYayinevibtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ekleYayinevibtn.Image = ((System.Drawing.Image)(resources.GetObject("ekleYayinevibtn.Image")));
             this.ekleYayinevibtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ekleYayinevibtn.Location = new System.Drawing.Point(0, 583);
+            this.ekleYayinevibtn.Location = new System.Drawing.Point(0, 528);
             this.ekleYayinevibtn.Name = "ekleYayinevibtn";
             this.ekleYayinevibtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ekleYayinevibtn.Size = new System.Drawing.Size(217, 53);
+            this.ekleYayinevibtn.Size = new System.Drawing.Size(217, 48);
             this.ekleYayinevibtn.TabIndex = 11;
             this.ekleYayinevibtn.Text = "Yayınevi Ekle";
             this.ekleYayinevibtn.UseVisualStyleBackColor = false;
@@ -171,9 +173,9 @@
             this.silYazarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.silYazarbtn.Image = ((System.Drawing.Image)(resources.GetObject("silYazarbtn.Image")));
             this.silYazarbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.silYazarbtn.Location = new System.Drawing.Point(0, 530);
+            this.silYazarbtn.Location = new System.Drawing.Point(0, 480);
             this.silYazarbtn.Name = "silYazarbtn";
-            this.silYazarbtn.Size = new System.Drawing.Size(217, 53);
+            this.silYazarbtn.Size = new System.Drawing.Size(217, 48);
             this.silYazarbtn.TabIndex = 10;
             this.silYazarbtn.Text = "Yazar Sil";
             this.silYazarbtn.UseVisualStyleBackColor = false;
@@ -185,9 +187,9 @@
             this.guncelleYazarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.guncelleYazarbtn.Image = ((System.Drawing.Image)(resources.GetObject("guncelleYazarbtn.Image")));
             this.guncelleYazarbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guncelleYazarbtn.Location = new System.Drawing.Point(0, 477);
+            this.guncelleYazarbtn.Location = new System.Drawing.Point(0, 432);
             this.guncelleYazarbtn.Name = "guncelleYazarbtn";
-            this.guncelleYazarbtn.Size = new System.Drawing.Size(217, 53);
+            this.guncelleYazarbtn.Size = new System.Drawing.Size(217, 48);
             this.guncelleYazarbtn.TabIndex = 9;
             this.guncelleYazarbtn.Text = "Yazar Güncelle";
             this.guncelleYazarbtn.UseVisualStyleBackColor = false;
@@ -199,10 +201,10 @@
             this.ekleYazarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ekleYazarbtn.Image = ((System.Drawing.Image)(resources.GetObject("ekleYazarbtn.Image")));
             this.ekleYazarbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ekleYazarbtn.Location = new System.Drawing.Point(0, 424);
+            this.ekleYazarbtn.Location = new System.Drawing.Point(0, 384);
             this.ekleYazarbtn.Name = "ekleYazarbtn";
             this.ekleYazarbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ekleYazarbtn.Size = new System.Drawing.Size(217, 53);
+            this.ekleYazarbtn.Size = new System.Drawing.Size(217, 48);
             this.ekleYazarbtn.TabIndex = 8;
             this.ekleYazarbtn.Text = "Yazar Ekle";
             this.ekleYazarbtn.UseVisualStyleBackColor = false;
@@ -214,9 +216,9 @@
             this.silKitapbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.silKitapbtn.Image = ((System.Drawing.Image)(resources.GetObject("silKitapbtn.Image")));
             this.silKitapbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.silKitapbtn.Location = new System.Drawing.Point(0, 371);
+            this.silKitapbtn.Location = new System.Drawing.Point(0, 336);
             this.silKitapbtn.Name = "silKitapbtn";
-            this.silKitapbtn.Size = new System.Drawing.Size(217, 53);
+            this.silKitapbtn.Size = new System.Drawing.Size(217, 48);
             this.silKitapbtn.TabIndex = 7;
             this.silKitapbtn.Text = "Kitap Sil";
             this.silKitapbtn.UseVisualStyleBackColor = false;
@@ -229,9 +231,9 @@
             this.guncelleKitapbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.guncelleKitapbtn.Image = ((System.Drawing.Image)(resources.GetObject("guncelleKitapbtn.Image")));
             this.guncelleKitapbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guncelleKitapbtn.Location = new System.Drawing.Point(0, 318);
+            this.guncelleKitapbtn.Location = new System.Drawing.Point(0, 288);
             this.guncelleKitapbtn.Name = "guncelleKitapbtn";
-            this.guncelleKitapbtn.Size = new System.Drawing.Size(217, 53);
+            this.guncelleKitapbtn.Size = new System.Drawing.Size(217, 48);
             this.guncelleKitapbtn.TabIndex = 6;
             this.guncelleKitapbtn.Text = "Kitap Güncelle";
             this.guncelleKitapbtn.UseVisualStyleBackColor = false;
@@ -244,10 +246,10 @@
             this.ekleKitapbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ekleKitapbtn.Image = ((System.Drawing.Image)(resources.GetObject("ekleKitapbtn.Image")));
             this.ekleKitapbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ekleKitapbtn.Location = new System.Drawing.Point(0, 265);
+            this.ekleKitapbtn.Location = new System.Drawing.Point(0, 240);
             this.ekleKitapbtn.Name = "ekleKitapbtn";
             this.ekleKitapbtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ekleKitapbtn.Size = new System.Drawing.Size(217, 53);
+            this.ekleKitapbtn.Size = new System.Drawing.Size(217, 48);
             this.ekleKitapbtn.TabIndex = 5;
             this.ekleKitapbtn.Text = "Kitap Ekle";
             this.ekleKitapbtn.UseVisualStyleBackColor = false;
@@ -260,9 +262,9 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(0, 212);
+            this.button2.Location = new System.Drawing.Point(0, 192);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(217, 53);
+            this.button2.Size = new System.Drawing.Size(217, 48);
             this.button2.TabIndex = 4;
             this.button2.Text = "Kaynak Editor";
             this.button2.UseVisualStyleBackColor = false;
@@ -275,9 +277,9 @@
             this.silAbonebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.silAbonebtn.Image = ((System.Drawing.Image)(resources.GetObject("silAbonebtn.Image")));
             this.silAbonebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.silAbonebtn.Location = new System.Drawing.Point(0, 159);
+            this.silAbonebtn.Location = new System.Drawing.Point(0, 144);
             this.silAbonebtn.Name = "silAbonebtn";
-            this.silAbonebtn.Size = new System.Drawing.Size(217, 53);
+            this.silAbonebtn.Size = new System.Drawing.Size(217, 48);
             this.silAbonebtn.TabIndex = 3;
             this.silAbonebtn.Text = "Sil";
             this.silAbonebtn.UseVisualStyleBackColor = false;
@@ -290,9 +292,9 @@
             this.guncelleAbonebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.guncelleAbonebtn.Image = ((System.Drawing.Image)(resources.GetObject("guncelleAbonebtn.Image")));
             this.guncelleAbonebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guncelleAbonebtn.Location = new System.Drawing.Point(0, 106);
+            this.guncelleAbonebtn.Location = new System.Drawing.Point(0, 96);
             this.guncelleAbonebtn.Name = "guncelleAbonebtn";
-            this.guncelleAbonebtn.Size = new System.Drawing.Size(217, 53);
+            this.guncelleAbonebtn.Size = new System.Drawing.Size(217, 48);
             this.guncelleAbonebtn.TabIndex = 2;
             this.guncelleAbonebtn.Text = "Güncelle";
             this.guncelleAbonebtn.UseVisualStyleBackColor = false;
@@ -305,10 +307,10 @@
             this.ekleAbonebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ekleAbonebtn.Image = ((System.Drawing.Image)(resources.GetObject("ekleAbonebtn.Image")));
             this.ekleAbonebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ekleAbonebtn.Location = new System.Drawing.Point(0, 53);
+            this.ekleAbonebtn.Location = new System.Drawing.Point(0, 48);
             this.ekleAbonebtn.Name = "ekleAbonebtn";
             this.ekleAbonebtn.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ekleAbonebtn.Size = new System.Drawing.Size(217, 53);
+            this.ekleAbonebtn.Size = new System.Drawing.Size(217, 48);
             this.ekleAbonebtn.TabIndex = 1;
             this.ekleAbonebtn.Text = "Ekle";
             this.ekleAbonebtn.UseVisualStyleBackColor = false;
@@ -323,7 +325,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 53);
+            this.button1.Size = new System.Drawing.Size(217, 48);
             this.button1.TabIndex = 0;
             this.button1.Text = "Aboneler";
             this.button1.UseVisualStyleBackColor = false;
@@ -337,6 +339,21 @@
             this.kullaniciBilgiPanel.Name = "kullaniciBilgiPanel";
             this.kullaniciBilgiPanel.Size = new System.Drawing.Size(988, 37);
             this.kullaniciBilgiPanel.TabIndex = 1;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(0, 816);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(217, 48);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Kitap Alis/Veris İşlemi";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // IslemPaneli
             // 
@@ -376,5 +393,6 @@
         private System.Windows.Forms.Button silYayinevibtn;
         private System.Windows.Forms.Button guncelleYayinevibtn;
         private System.Windows.Forms.Button ekleYayinevibtn;
+        private System.Windows.Forms.Button button3;
     }
 }

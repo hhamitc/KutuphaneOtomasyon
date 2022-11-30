@@ -27,10 +27,11 @@
           <Property Name="Gorevli_k_adi" Type="nvarchar" MaxLength="10" />
           <Property Name="Gorevli_sifre" Type="nvarchar" MaxLength="10" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6013: The table/view 'KutuphaneProje.dbo.Islem' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
         <EntityType Name="Islem">
-          <Property Name="IslemNo" Type="int" />
+          <Key>
+            <PropertyRef Name="IslemId" />
+          </Key>
+          <Property Name="IslemId" Type="int" Nullable="false" />
           <Property Name="AboneId" Type="int" />
           <Property Name="KitapId" Type="int" />
           <Property Name="GorevliId" Type="int" />
@@ -38,7 +39,7 @@ warning 6013: The table/view 'KutuphaneProje.dbo.Islem' does not have a primary 
           <Property Name="TeslimTarihi" Type="date" />
           <Property Name="GunFarki" Type="int" />
           <Property Name="IslemSonuUcret" Type="money" />
-        </EntityType>-->
+        </EntityType>
         <EntityType Name="Kitaplar">
           <Key>
             <PropertyRef Name="KitapId" />
@@ -75,6 +76,7 @@ warning 6013: The table/view 'KutuphaneProje.dbo.Islem' does not have a primary 
         <EntityContainer Name="KutuphaneProjeModelStoreContainer">
           <EntitySet Name="Aboneler" EntityType="Self.Aboneler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Gorevliler" EntityType="Self.Gorevliler" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Islem" EntityType="Self.Islem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Kitaplar" EntityType="Self.Kitaplar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Turler" EntityType="Self.Turler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="YayinEvleri" EntityType="Self.YayinEvleri" Schema="dbo" store:Type="Tables" />
@@ -146,7 +148,21 @@ warning 6013: The table/view 'KutuphaneProje.dbo.Islem' does not have a primary 
           <EntitySet Name="Turler" EntityType="Self.Turler" />
           <EntitySet Name="YayinEvleri" EntityType="Self.YayinEvleri" />
           <EntitySet Name="Yazarlar" EntityType="Self.Yazarlar" />
+          <EntitySet Name="Islem" EntityType="KutuphaneProjeModel.Islem" />
         </EntityContainer>
+        <EntityType Name="Islem">
+          <Key>
+            <PropertyRef Name="IslemId" />
+          </Key>
+          <Property Name="IslemId" Type="Int32" Nullable="false" />
+          <Property Name="AboneId" Type="Int32" />
+          <Property Name="KitapId" Type="Int32" />
+          <Property Name="GorevliId" Type="Int32" />
+          <Property Name="AlisTarihi" Type="DateTime" Precision="0" />
+          <Property Name="TeslimTarihi" Type="DateTime" Precision="0" />
+          <Property Name="GunFarki" Type="Int32" />
+          <Property Name="IslemSonuUcret" Type="Decimal" Precision="19" Scale="4" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -214,6 +230,20 @@ warning 6013: The table/view 'KutuphaneProje.dbo.Islem' does not have a primary 
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Islem">
+            <EntityTypeMapping TypeName="KutuphaneProjeModel.Islem">
+              <MappingFragment StoreEntitySet="Islem">
+                <ScalarProperty Name="IslemSonuUcret" ColumnName="IslemSonuUcret" />
+                <ScalarProperty Name="GunFarki" ColumnName="GunFarki" />
+                <ScalarProperty Name="TeslimTarihi" ColumnName="TeslimTarihi" />
+                <ScalarProperty Name="AlisTarihi" ColumnName="AlisTarihi" />
+                <ScalarProperty Name="GorevliId" ColumnName="GorevliId" />
+                <ScalarProperty Name="KitapId" ColumnName="KitapId" />
+                <ScalarProperty Name="AboneId" ColumnName="AboneId" />
+                <ScalarProperty Name="IslemId" ColumnName="IslemId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -229,7 +259,7 @@ warning 6013: The table/view 'KutuphaneProje.dbo.Islem' does not have a primary 
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
