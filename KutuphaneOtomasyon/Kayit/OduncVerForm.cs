@@ -82,14 +82,43 @@ namespace KutuphaneOtomasyon.Kayit
             yeniIslem.AboneId = secilenKisi.AboneId;
             yeniIslem.GorevliId = 1; // Giriş yapan kullanıcıyı eklemeyi bulamadım.Sonra bakacağım.
             yeniIslem.AlisTarihi = DateTime.Today;
-            yeniIslem.TeslimTarihi = DateTime.Today.AddDays(15);
-
+            yeniIslem.TeslimTarihi =null /*DateTime.Today.AddDays(15)*/;
 
             db.Islem.Add(yeniIslem);
             db.SaveChanges();
 
+            //işlemleri listeledim.
+            var kayitlar = db.Islem.ToList();
+            dataGridView1.DataSource = kayitlar.ToList();
 
+            //kitapları listeledim.
+            var kitaplar = db.Kitaplar.ToList();
+            dataGridView2.DataSource = kitaplar.ToList();
         }
+
+        //private void button2_Click(object sender, EventArgs e)
+        //// Burada teslim al butonuyla, kullanıcının telefonundan işlemlerini getirme ve teslim tarihi null olan işleme bu günün tarihini yazdırma işlemi yaptırmaya çalıştım ama yapamadım.....
+        
+        //// !!!!!!!!OduncVerFormDesigner kısmında 121. satırı da yorum satırından çıkar bunu denemek için.!!!!!!
+        
+        //{
+        //    //Aboneyi aldım.
+        //    string secilenKisiTelefon = TelefonBultxt.Text;
+        //    var secilenKisi = db.Aboneler.Where(x => x.AboneTelefon.Equals(secilenKisiTelefon)).FirstOrDefault();
+
+        //    //Islemi aldım
+        //    int secilenIslemId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+        //    var secilenIslem = db.Islem.Where(x => x.IslemId == secilenIslemId).FirstOrDefault();
+
+        //    Islem teslimAl = new Islem();
+        //    secilenIslem.TeslimTarihi = DateTime.Today;
+        //    var guncellenecekKitap = db.Kitaplar.Where(x => x.KitapId == secilenKitap).FirstOrDefault();
+
+        //    db.SaveChanges();
+        //}
+
+
+
     }
 }
  
