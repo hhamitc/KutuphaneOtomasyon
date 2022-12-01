@@ -35,8 +35,8 @@
           <Property Name="AboneId" Type="int" />
           <Property Name="KitapId" Type="int" />
           <Property Name="GorevliId" Type="int" />
-          <Property Name="AlisTarihi" Type="date" />
-          <Property Name="TeslimTarihi" Type="date" />
+          <Property Name="AlisTarihi" Type="datetime" />
+          <Property Name="TeslimTarihi" Type="datetime" />
           <Property Name="GunFarki" Type="int" />
           <Property Name="IslemSonuUcret" Type="money" />
         </EntityType>
@@ -158,8 +158,8 @@
           <Property Name="AboneId" Type="Int32" />
           <Property Name="KitapId" Type="Int32" />
           <Property Name="GorevliId" Type="Int32" />
-          <Property Name="AlisTarihi" Type="DateTime" Precision="0" />
-          <Property Name="TeslimTarihi" Type="DateTime" Precision="0" />
+          <Property Name="AlisTarihi" Type="DateTime" Precision="3" />
+          <Property Name="TeslimTarihi" Type="DateTime" Precision="3" />
           <Property Name="GunFarki" Type="Int32" />
           <Property Name="IslemSonuUcret" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
