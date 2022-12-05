@@ -13,6 +13,7 @@ namespace KutuphaneOtomasyon.Abone
     public partial class AboneSilForm : Form
     {
         KutuphaneProjeEntities db = new KutuphaneProjeEntities();
+       
 
         public AboneSilForm()
         {
@@ -32,11 +33,22 @@ namespace KutuphaneOtomasyon.Abone
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int secilenId= Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
-            var abone = db.Aboneler.Where(x => x.AboneId == secilenId).FirstOrDefault();
-            db.Aboneler.Remove(abone);
-            db.SaveChanges();
-            listele();
+            DialogResult silinsinMi = MessageBox.Show("Silmek istediğinizden emin misiniz.\nSilme işlemi geri alamazsınız.","Silme işlemi",MessageBoxButtons.YesNo);
+
+            if (silinsinMi==DialogResult.Yes)
+            {
+                int secilenId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                var abone = db.Aboneler.Where(x => x.AboneId == secilenId).FirstOrDefault();
+                db.Aboneler.Remove(abone);
+                db.SaveChanges();
+                listele();
+                MessageBox.Show("Silindi");
+            }
+            else
+            {
+                MessageBox.Show("Silme lazım olur.");
+            }
+            
         }
     }
 }

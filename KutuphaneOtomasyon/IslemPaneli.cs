@@ -47,52 +47,99 @@ namespace KutuphaneOtomasyon
 
         }
 
+
+        private AboneListeForm alisteForm; 
+        /// <summary>
+        /// kullanıcı liste ve butonları açar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+
+            
             if (ekleAbonebtn.Visible == false)
             {
                 ekleAbonebtn.Visible = true;
                 guncelleAbonebtn.Visible = true;
                 silAbonebtn.Visible = true;
+
+                alisteForm= new AboneListeForm();
+
+                alisteForm.MdiParent = this;
+                alisteForm.Show();
             }
             else
             {
                 ekleAbonebtn.Visible = false;
                 guncelleAbonebtn.Visible = false;
                 silAbonebtn.Visible = false;
-
+                //alisteForm.Hide();
+                alisteForm.Close();
             }
 
 
-            AboneListeForm alisteForm= new AboneListeForm();
-            alisteForm.MdiParent= this;
-            alisteForm.Show();
+            
 
             
              
         }
-
+        private AboneEkleForm aekleForm;
+        private bool ekleAboneDurum = false;
         private void ekleAbonebtn_Click(object sender, EventArgs e)
         {
-            AboneEkleForm ekleForm = new AboneEkleForm();
-            ekleForm.MdiParent = this;
-            ekleForm.Show();
+            
+            if (ekleAboneDurum == false)
+            {
+                aekleForm = new AboneEkleForm();
+                aekleForm.MdiParent = this;
+                aekleForm.Show();
+                ekleAboneDurum = true;
+            }
+            else
+            {
+                aekleForm.Close();
+                ekleAboneDurum = false;
+            }
+            
         }
-
+        private AboneSilForm asilForm;
+        private bool silAboneDurum = false;
         private void silAbonebtn_Click(object sender, EventArgs e)
         {
-            AboneSilForm aSil = new AboneSilForm();
-            aSil.MdiParent = this;
-            aSil.Show();
+            if (silAboneDurum == false)
+
+            {   asilForm = new AboneSilForm();
+                asilForm.MdiParent = this;
+                asilForm.Show();
+                silAboneDurum = true;
+            }
+            else
+            {
+                asilForm.Close();
+                silAboneDurum = false;
+            }
+           
         }
 
+        private AboneGuncelleForm aguncelleForm;
+        private bool guncelleAboneDurum = false;
         private void guncelleAbonebtn_Click(object sender, EventArgs e)
         {
-            AboneGuncelleForm aGuncelle = new AboneGuncelleForm();
-            aGuncelle.MdiParent = this;
-            aGuncelle.Show();
+            if  (guncelleAboneDurum == false)
+            {
+                aguncelleForm = new AboneGuncelleForm();
+                aguncelleForm.MdiParent = this;
+                aguncelleForm.Show();
+                guncelleAboneDurum = true;
+            }
+            else
+            {
+                aguncelleForm.Close();
+                guncelleAboneDurum= false;
+            }
         }
-
+        private KaynakListeForm klisteForm;
         private void button2_Click(object sender, EventArgs e)
         {
             if (ekleKitapbtn.Visible == false)
@@ -112,6 +159,11 @@ namespace KutuphaneOtomasyon
                 guncelleTurbtn.Visible = true;
                 silTurbtn.Visible = true;
 
+                klisteForm = new KaynakListeForm();
+
+                klisteForm.MdiParent = this;
+                klisteForm.Show();
+
 
             }
             else
@@ -130,11 +182,12 @@ namespace KutuphaneOtomasyon
                 ekleTurbtn.Visible = false;
                 guncelleTurbtn.Visible = false;
                 silTurbtn.Visible = false;
+
+                klisteForm.Close();
+
             }
 
-            KaynakListeForm kliste = new KaynakListeForm();
-            kliste.MdiParent = this;
-            kliste.Show();
+           
 
         }
 

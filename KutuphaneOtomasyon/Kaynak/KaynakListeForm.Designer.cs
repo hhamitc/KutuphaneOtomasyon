@@ -49,6 +49,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "KaynakListeForm";
             this.Text = "KaynakListeForm";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.KaynakListeForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
