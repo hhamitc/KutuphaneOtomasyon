@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace KutuphaneOtomasyon.Kayit
@@ -13,7 +8,7 @@ namespace KutuphaneOtomasyon.Kayit
     public partial class OduncVerForm : Form
     {
 
-    
+
         public OduncVerForm()
         {
             InitializeComponent();
@@ -26,22 +21,22 @@ namespace KutuphaneOtomasyon.Kayit
 
             //işlemleri listeledim.
             var kayitlar = db.Islem.ToList();
-            dataGridView1.DataSource= kayitlar.ToList();
+            dataGridView1.DataSource = kayitlar.ToList();
 
             //kitapları listeledim.
             var kitaplar = db.Kitaplar.ToList();
             dataGridView2.DataSource = kitaplar.ToList();
 
             //kolon adları düzenlendi
-            dataGridView1.Columns[0].HeaderText= "IslemNo";
+            dataGridView1.Columns[0].HeaderText = "IslemNo";
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string arananTelefon=TelefonBultxt.Text;
-            var aboneVarMi = db.Aboneler.Where(x => x.AboneTelefon==arananTelefon).FirstOrDefault();
-           
+            string arananTelefon = TelefonBultxt.Text;
+            var aboneVarMi = db.Aboneler.Where(x => x.AboneTelefon == arananTelefon).FirstOrDefault();
+
 
             if (aboneVarMi != null)
             {
@@ -60,11 +55,11 @@ namespace KutuphaneOtomasyon.Kayit
 
             //filtreleme eklendi
             string gelenAd = textBox1.Text;
-            var bulnanKitaplar = db.Kitaplar.Where(x=>x.KitapAdi.Contains(gelenAd)).ToList();
+            var bulnanKitaplar = db.Kitaplar.Where(x => x.KitapAdi.Contains(gelenAd)).ToList();
             dataGridView2.DataSource = bulnanKitaplar;
         }
 
-      
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -82,7 +77,7 @@ namespace KutuphaneOtomasyon.Kayit
             yeniIslem.AboneId = secilenKisi.AboneId;
             yeniIslem.GorevliId = 1; // Giriş yapan kullanıcıyı eklemeyi bulamadım.Sonra bakacağım.
             yeniIslem.AlisTarihi = DateTime.Today;
-            yeniIslem.TeslimTarihi =null /*DateTime.Today.AddDays(15)*/;
+            yeniIslem.TeslimTarihi = null /*DateTime.Today.AddDays(15)*/;
 
             db.Islem.Add(yeniIslem);
             db.SaveChanges();
@@ -95,7 +90,7 @@ namespace KutuphaneOtomasyon.Kayit
             var kitaplar = db.Kitaplar.ToList();
             dataGridView2.DataSource = kitaplar.ToList();
 
-            MessageBox.Show("Ödünç verme işlemi yapıldı.","Ödünç Ver.",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            MessageBox.Show("Ödünç verme işlemi yapıldı.", "Ödünç Ver.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -118,18 +113,20 @@ namespace KutuphaneOtomasyon.Kayit
             if (secilenIslem.TeslimTarihi == null)
             {
                 secilenIslem.TeslimTarihi = DateTime.Now;
-                var tarih1 = secilenIslem.TeslimTarihi;
-                var tarih2 = secilenIslem.AlisTarihi;
-                var GunFarki = Convert.ToInt32(tarih1 - tarih2);
+                var tarih1 = Convert.ToDateTime(secilenIslem.TeslimTarihi);
+                var tarih2 = Convert.ToDateTime(secilenIslem.AlisTarihi);
+
+                var GunFarki = (tarih1 - tarih2).Days;
                 secilenIslem.GunFarki = Convert.ToInt32(GunFarki);
-                
+
+
                 //secilenIslem.GunFarki = Convert.ToInt32(secilenIslem.TeslimTarihi - secilenIslem.AlisTarihi);
                 MessageBox.Show("Kayıt Tamamlandı.", "Başarılı", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
             {
-                MessageBox.Show("Lütfen doğru işlemi seçtiğinizden emin olun!","Kayıt Eklendi" , MessageBoxButtons.RetryCancel);
+                MessageBox.Show("Lütfen doğru işlemi seçtiğinizden emin olun!", "Kayıt Eklendi", MessageBoxButtons.RetryCancel);
             }
 
             //işlemleri listeledim.
@@ -140,4 +137,3 @@ namespace KutuphaneOtomasyon.Kayit
         }
     }
 }
- 

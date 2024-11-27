@@ -8,10 +8,10 @@
         <EntityTypeShape EntityType="KutuphaneProjeModel.Aboneler" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KutuphaneProjeModel.Gorevliler" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KutuphaneProjeModel.Kitaplar" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneProjeModel.Turler" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneProjeModel.Turler" Width="1.5" PointX="4.5" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="KutuphaneProjeModel.YayinEvleri" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneProjeModel.Yazarlar" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="KutuphaneProjeModel.Islem" Width="1.5" PointX="2.375" PointY="4.375" />
+        <EntityTypeShape EntityType="KutuphaneProjeModel.Yazarlar" Width="1.5" PointX="6.625" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="KutuphaneProjeModel.Islem" Width="1.5" PointX="2.75" PointY="3" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
